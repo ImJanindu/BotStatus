@@ -1,0 +1,51 @@
+{
+  "name": "Bot Status",
+  "description": "A telegram bot that can show the status of your bots",
+  "keywords": [
+    "telegram",
+    "best",
+    "status",
+    "bot" 
+  ],
+  "repository": "https://github.com/ImJanindu/BotStatus",
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "SESSION_NAME": {
+      "description": "Your pyrogram string session",
+      "value": ""
+    },
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "UPDATES_CHANNEL": {
+      "description": "The id of a channel to which need to send the current status",
+      "value": ""
+    },
+    "MESSAGE_ID": {
+      "description": "Give the id of message which need to be edited you can give more than one id and separated with space",
+      "value": ""
+    },
+    "BOTS": {
+      "description": "List of bot usernames separated with space",
+      "value": ""
+    }
+  },
+  "addons": [],
+    "buildpacks": [
+        {"url": "heroku/python"}
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
