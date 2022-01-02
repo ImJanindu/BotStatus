@@ -36,7 +36,7 @@ def main():
             time_now = datetime.datetime.now(pytz.timezone('Asia/Colombo'))
             formatted_time = time_now.strftime("%d %B %Y %I:%M %p")
 
-            edit_text += f"⏳ Last Update on {formatted_time} (LST)"
+            edit_text += f"**⏳ Last Updated:** {formatted_time} (LST)"
 
             for status_message_id in status_message_ids:
                 user_client.edit_message_text(int(updates_channel), status_message_id,
